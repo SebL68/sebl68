@@ -11,42 +11,133 @@
 			background: #F0F0F0;
 		}
 		h1{
-			background: #0099CC;
+			background: #09C;
 			color: #FFF;
 			margin: 0;
 			padding: 20px 20px 20px 40px;
+		}
+		main{
+			padding: 20px 20px 20px 40px;
+			display: grid;
+			grid-gap: 10px;
+		}
+		h2{
+			border: 1px solid #AAA;
+			padding: 40px;
+			margin: 0;
+			background: #FFF;
+			border-radius: 20px;
+			cursor: pointer;
+			transition: 0.4s;
+		}
+		.attente{
+			color: #AAA;
+		}
+		h2+div{
+			height: 0;
+			overflow: hidden;
+			opacity: 0;
+			transform: translateX(-50px);
+			transition: opacity 0.4s, transform 0.4s;
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 30px;
+		}
+
+		.ouvert{
+			background: #9C0;
+			color: #FFF;
+		}
+
+		.ouvert+div{
+			height: auto;
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		a{
+			background: #FFF;
+			color: #424242;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			border: 1px solid #AAA;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 10px;
+			font-weight: 700;
+		}
+		a::after{
+			content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='DimGrey' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'></path><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'></path></svg>");
+			margin: 10px;
+		}
+		a:hover{
+			animation: piou 0.4s infinite alternate;
+		}
+		@keyframes piou{
+			0%{border-color: #aaa}
+			100%{border-color: #fff}
+		}
+		.cours{
+			background:#ef5350;
+			color: #FFF;
 		}
 	</style>
 </head>
 <body>
 	<h1>Cours de première NSI</h1>
 
-	<h2>Séquence 1</h2>
-	<div>Contenu à venir.</div>
+	<main>
+		<h2 class=attente>Séquence 1 - Comment l’information est stockée ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 2</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 2 - Comment fonctionne un logiciel ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 3</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 3 - Comment utiliser les données ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 4</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 4 - Comment fonctionne un ordinateur et internet ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 5</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 5 - Comment résoudre des problèmes avec un ordinateur ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 6</h2>
-	<div>Contenu à venir.</div>
+		<h2>Séquence 6 - Comment fonctionne un site internet ?</h2>
+		<div>
+			<a class=cours href="">Document de cours</a>
+			<a href="">TP 1</a>
+			<a href="">TP 2</a>
+			<a href="">TP 3</a>
+			<a href="">TP 4</a>
+		</div>
 
-	<h2>Séquence 7</h2>
-	<div>Contenu à venir.</div>
+		<h2 >Séquence 7 - Comment utiliser une IHM pour collecter des données ?</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 8</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 8 - Réaliser ses propres choix pour résoudre un problème.</h2>
+		<div>Contenu à venir.</div>
 
-	<h2>Séquence 9</h2>
-	<div>Contenu à venir.</div>
+		<h2 class=attente>Séquence 9 - Comment résoudre des problèmes avec des machines ?</h2>
+		<div>Contenu à venir.</div>
 
+	</main>
+	
+	<script>
+		document.querySelectorAll("h2").forEach(function(e){
+			e.addEventListener("click", ouvrir)
+		})
+
+		function ouvrir(){
+			var isOuvert = this.classList.contains("ouvert")
+			document.querySelectorAll("h2").forEach(function(e){
+				e.classList.remove("ouvert")
+			})
+			if(!isOuvert){
+				this.classList.add("ouvert");
+				this.scrollIntoView({behavior: 'smooth'});
+			}
+		}
+	</script>
 </body>
 </html>
