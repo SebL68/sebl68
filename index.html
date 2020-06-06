@@ -39,11 +39,12 @@
 			opacity: 0;
 			transform: translateX(-50px);
 			transition: opacity 0.4s, transform 0.4s;
-			display: flex;
-			flex-wrap: wrap;
 			padding-left: 30px;
 		}
-
+		h2+div>div{
+			display: flex;
+			flex-wrap: wrap;
+		}
 		.ouvert{
 			background: #9C0;
 			color: #FFF;
@@ -78,7 +79,7 @@
 			0%{border-color: #aaa}
 			100%{border-color: #fff}
 		}
-		.cours{
+		.cours>a{
 			background:#ef5350;
 			color: #FFF;
 		}
@@ -106,23 +107,35 @@
 
 		<h2>Séquence 6 - Comment fonctionne un site internet ?</h2>
 		<div>
-			<a class=cours target=_blank href="https://docs.google.com/document/d/1VS8a1NDCIs-cyf4inh5Y1VN_XdZMTxzuLkTnv0cS6BI/edit?usp=sharing">Cours - HTML</a>
-			<a class=cours target=_blank href="https://docs.google.com/document/d/1-ROdYTsKDMU-PPGOIoxdoyGAyZMhxhJaB5VRK5t_EHQ/edit?usp=sharing">Cours - CSS</a>
-			<a target=_blank href="https://docs.google.com/document/d/1bv1ckPiNrw5CCVBLrbRdpR70GlEwfuUpKDMLrfCIp9c/edit?usp=sharing">TP 1</a>
-			<a target=_blank href="https://docs.google.com/document/d/1xsZr62WLjtVwI7uhIQNSiqpuldoDSm2d4KIxFXmelcg/edit?usp=sharing">TP 2</a>
-			<a target=_blank href="https://docs.google.com/document/d/1nXKGE-hX3ycnZA4KDn8sxRiftbtawx7DBeVQ2BrrdpY/edit?usp=sharing">TP 3</a>
-			<a target=_blank href="https://docs.google.com/document/d/1RU63pCOUg3ky40B7Kg2GbMwcuULVCGeJ_dEdYJpk5g4/edit?usp=sharing">TP 4</a>
+			<div class=cours>
+				<a target=_blank href="https://docs.google.com/document/d/1VS8a1NDCIs-cyf4inh5Y1VN_XdZMTxzuLkTnv0cS6BI/edit?usp=sharing">Cours - HTML</a>
+				<a target=_blank href="https://docs.google.com/document/d/1-ROdYTsKDMU-PPGOIoxdoyGAyZMhxhJaB5VRK5t_EHQ/edit?usp=sharing">Cours - CSS</a>
+			</div>
+			<div>
+				<a target=_blank href="https://docs.google.com/document/d/1bv1ckPiNrw5CCVBLrbRdpR70GlEwfuUpKDMLrfCIp9c/edit?usp=sharing">TP 1 - Premier site</a>
+				<a target=_blank href="https://docs.google.com/document/d/1xsZr62WLjtVwI7uhIQNSiqpuldoDSm2d4KIxFXmelcg/edit?usp=sharing">TP 2 - Mise en page et mise en ligne</a>
+				<a target=_blank href="https://docs.google.com/document/d/1nXKGE-hX3ycnZA4KDn8sxRiftbtawx7DBeVQ2BrrdpY/edit?usp=sharing">TP 3 - En pratique</a>
+				<a target=_blank href="https://docs.google.com/document/d/1RU63pCOUg3ky40B7Kg2GbMwcuULVCGeJ_dEdYJpk5g4/edit?usp=sharing">TP 4 - Entraînement</a>
+				<a target=_blank href="https://docs.google.com/document/d/1RU63pCOUg3ky40B7Kg2GbMwcuULVCGeJ_dEdYJpk5g4/edit?usp=sharing">TP 4 bis - Evaluation</a>
+			</div>
+			
 		</div>
 
 		<h2 >Séquence 7 - Comment utiliser une IHM pour collecter des données ?</h2>
 		<div>
-			<a class=cours target=_blank href="https://docs.google.com/document/d/1sVvsggO7qeuCZ5eNtDpw8bvZfQCkPhaUh84TPZ1OiyE/edit?usp=sharing">Cours - Javascript</a>
-			<a target=_blank href="https://docs.google.com/document/d/1RpT6S3f0PKAf2al_IcIWMybcBA_Ex6AQjB2eG1KiP_s/edit?usp=sharing">TP 1</a>
-			<a target=_blank href="https://docs.google.com/document/d/1QH9W3vJzDEpt7eKc1lem8yLWUoNfSv5xQ5Na7RL0B2M/edit?usp=sharing">TP 2</a>
-			<a target=_blank href="https://docs.google.com/document/d/1Tv1rH5txzWPSndSCSYIcBor24NgnqzIlxcAeH8_WJ6A/edit?usp=sharing">TP 3</a>
-			<a target=_blank href="https://docs.google.com/document/d/1CvmkkKhVeuY1mdqHXHtokwRCo9FHP9aE6gw9woxgrFo/edit?usp=sharing">TP 4</a>
-			<a target=_blank href="https://docs.google.com/document/d/13TzG_94sihsIoKjVFJgNfWWEjsusKbLT1Ldq_hg-tJ0/edit?usp=sharing">TP 5</a>
-			<a target=_blank href="https://docs.google.com/document/d/108UpMnSZd0EunhQA2kmjuqimwgBDmuRBfAhTDaIAjHg/edit?usp=sharing">TP 6</a>
+			<div class=cours>
+				<a class=cours target=_blank href="https://docs.google.com/document/d/1sVvsggO7qeuCZ5eNtDpw8bvZfQCkPhaUh84TPZ1OiyE/edit?usp=sharing">Cours - Javascript</a>
+				<a class=cours target=_blank href="https://docs.google.com/document/d/1QTlLXAeBzeAs9MHE3nUX94SS7EDAamuY9OSVFyDYpds/edit?usp=sharing">Cours - PHP</a>
+			</div>
+			<div>
+				<a target=_blank href="https://docs.google.com/document/d/1RpT6S3f0PKAf2al_IcIWMybcBA_Ex6AQjB2eG1KiP_s/edit?usp=sharing">TP 1</a>
+				<a target=_blank href="https://docs.google.com/document/d/1QH9W3vJzDEpt7eKc1lem8yLWUoNfSv5xQ5Na7RL0B2M/edit?usp=sharing">TP 2</a>
+				<a target=_blank href="https://docs.google.com/document/d/1Tv1rH5txzWPSndSCSYIcBor24NgnqzIlxcAeH8_WJ6A/edit?usp=sharing">TP 3</a>
+				<a target=_blank href="https://docs.google.com/document/d/1CvmkkKhVeuY1mdqHXHtokwRCo9FHP9aE6gw9woxgrFo/edit?usp=sharing">TP 4</a>
+				<a target=_blank href="https://docs.google.com/document/d/13TzG_94sihsIoKjVFJgNfWWEjsusKbLT1Ldq_hg-tJ0/edit?usp=sharing">TP 5</a>
+				<a target=_blank href="https://docs.google.com/document/d/108UpMnSZd0EunhQA2kmjuqimwgBDmuRBfAhTDaIAjHg/edit?usp=sharing">TP 6</a>
+			</div>
+			
 		</div>
 
 		<h2 class=attente>Séquence 8 - Réaliser ses propres choix pour résoudre un problème.</h2>
