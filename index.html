@@ -163,13 +163,13 @@
 		})
 
 		function ouvrir(){
-			var isOuvert = this.classList.contains("ouvert")
-			document.querySelectorAll("h2").forEach(function(e){
-				e.classList.remove("ouvert")
-			})
-			if(!isOuvert){
+			var obj = document.querySelector(".ouvert");
+			if(obj != this){
 				this.classList.add("ouvert");
 				this.scrollIntoView({behavior: 'smooth'});
+			} 
+			if(obj){
+				obj.classList.remove("ouvert");
 			}
 		}
 	</script>
